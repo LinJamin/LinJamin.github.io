@@ -1,0 +1,61 @@
+/*底部圆圈属性*/
+.pages li{ 
+	list-style-type:none;
+	width:10px;
+	height:10px;
+	border-radius:10px;
+	background-color:white
+}
+/*鼠标经过圆圈是有白色阴影*/
+.pages li:hover 
+{
+	box-shadow:0 0 5px 2px white
+}
+/*点击圆圈是则变为橙色*/
+.pages li.active
+{
+	background-color:orange;
+	box-shadow:0 0 5px 2px orange
+}
+
+.pages
+{
+	position:absolute;   
+	/*绝对定位元素，位置通过“left、right、top、bottom*属性进行规定*/
+	z-index:999; /*堆叠顺序，数字越大，元素越前*/
+}
+/*水平位置*/
+.pages.horizontal 
+{
+	left:50%;
+	transform:translateX(-50%); /*定义X轴转换*/
+	bottom:5px
+}
+
+.pages.horizontal li
+{
+	display:inline-block;
+	margin-right:10px
+}
+
+.pages.horizontal li:last-child
+{
+	margin-right:0
+}
+
+.pages.vertical
+{
+	right:5px;
+	/*top:50%;*/
+	transform:translateY(-50%)
+}
+
+.pages.vertical li
+{
+	margin-bottom:10px
+}
+
+.pages.vertical li:last-child
+{
+	margin-bottom:0
+}
